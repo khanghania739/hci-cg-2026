@@ -36,152 +36,179 @@
     <main>
         <section>
             <table>
-            <caption><strong>HTML Errors and Fixes</strong></caption>
+                <caption><strong>HTML Errors and Fixes</strong></caption>
 
-            <thead class="table-head">
+                <thead class="table-head">
 
-                <tr>
-                    <th>UI Element</th>
-                    <th>Wrong HTML(with mistake)</th>
-                    <th>Correct UI Element</th>
-                    <th>Correct HTML</th>
-                </tr>
+                    <tr>
+                        <th scope="col">UI Element</th>
+                        <th scope="col">Wrong HTML(with mistake)</th>
+                        <th scope="col">Correct UI Element</th>
+                        <th scope="col">Correct HTML</th>
+                    </tr>
 
-            </thead>
+                </thead>
 
-            <tbody>
+                <tbody>
 
-                <tr class="row-table">
-                    <td>Navigation menu has a link directly inside &lt;ul&gt; (missing &lt;li&gt;)</td>
-                    <td>
-                        <pre>&lt;ul&gt;
+                    <tr class="row-table">
+                        <td>Navigation menu has a link directly inside &lt;ul&gt; (missing &lt;li&gt;)</td>
+                        <td>
+                            <pre>&lt;ul&gt;
   &lt;a href="index.html"&gt;Home&lt;/a&gt;
 &lt;/ul&gt;</pre>
-                    </td>
-                    <td>Navigation list where each link is inside a list item</td>
-                    <td>
-                        <pre>&lt;ul&gt;
+                        </td>
+                        <td>Navigation list where each link is inside a list item</td>
+                        <td>
+                            <pre>&lt;ul&gt;
   &lt;li&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</pre>
-                    </td>
-                </tr>
+                        </td>
+                    </tr>
 
-                <tr class="row-table">
-                    <td>Navigation &lt;nav&gt; missing</td>
-                    <td>
-                        <pre>&lt;div&gt;
+                    <tr class="row-table">
+                        <td>Navigation &lt;nav&gt; missing</td>
+                        <td>
+                            <pre>&lt;div&gt;
   &lt;ul&gt;&lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 &lt;/div&gt;</pre>
-                    </td>
-                    <td>Navigation wrapped in semantic &lt;nav&gt;</td>
-                    <td>
-                        <pre>&lt;nav&gt;
+                        </td>
+                        <td>Navigation wrapped in semantic &lt;nav&gt;</td>
+                        <td>
+                            <pre>&lt;nav&gt;
   &lt;ul&gt;&lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 &lt;/nav&gt;</pre>
-                    </td>
+                        </td>
 
-                </tr>
+                    </tr>
 
-                <tr class="row-table">
-                    <td>Heading level skipped</td>
-                    <td>
-                        <pre>&lt;h1&gt;Main&lt;/h1&gt;
+                    <tr class="row-table">
+                        <td>Heading level skipped</td>
+                        <td>
+                            <pre>&lt;h1&gt;Main&lt;/h1&gt;
 &lt;h3&gt;Section&lt;/h3&gt;</pre>
-                    </td>
-                    <td>Headings follow proper hierarchy</td>
-                    <td>
-                        <pre>&lt;h1&gt;Main&lt;/h1&gt;
+                        </td>
+                        <td>Headings follow proper hierarchy</td>
+                        <td>
+                            <pre>&lt;h1&gt;Main&lt;/h1&gt;
 &lt;h2&gt;Section&lt;/h2&gt;</pre>
-                    </td>
-                </tr>
+                        </td>
+                    </tr>
 
-                <tr class="row-table">
-                    <td>Multiple &lt;h1&gt; used for styling</td>
-                    <td>
-                        <pre>&lt;h1&gt;Title&lt;/h1&gt;
+                    <tr class="row-table">
+                        <td>Multiple &lt;h1&gt; used for styling</td>
+                        <td>
+                            <pre>&lt;h1&gt;Title&lt;/h1&gt;
 &lt;h1&gt;Sub Title&lt;/h1&gt;</pre>
-                    </td>
-                    <td>Use &lt;h1&gt; for main and &lt;h2&gt; for subheading</td>
-                    <td>
-                        <pre>&lt;h1&gt;Title&lt;/h1&gt;
+                        </td>
+                        <td>Use &lt;h1&gt; for main and &lt;h2&gt; for subheading</td>
+                        <td>
+                            <pre>&lt;h1&gt;Title&lt;/h1&gt;
 &lt;h2&gt;Sub Title&lt;/h2&gt;</pre>
-                    </td>
-                </tr>
+                        </td>
+                    </tr>
 
-                <tr class="row-table">
-                    <td>&lt;div&gt; used instead of semantic element</td>
-                    <td>
-                        <pre>&lt;div&gt;Footer content&lt;/div&gt;</pre>
-                    </td>
-                    <td>Semantic &lt;footer&gt; used</td>
-                    <td>
-                        <pre>&lt;footer&gt;Footer content&lt;/footer&gt;</pre>
-                    </td>
-                </tr>
+                    <tr class="row-table">
+                        <td>&lt;div&gt; used instead of semantic element</td>
+                        <td>
+                            <pre>&lt;div&gt;Footer content&lt;/div&gt;</pre>
+                        </td>
+                        <td>Semantic &lt;footer&gt; used</td>
+                        <td>
+                            <pre>&lt;footer&gt;Footer content&lt;/footer&gt;</pre>
+                        </td>
+                    </tr>
 
-                <tr class="row-table">
-                    <td>Image missing alt attribute</td>
-                    <td>
-                        <pre>&lt;img src="logo.png"&gt;</pre>
-                    </td>
-                    <td>Image with descriptive alt text</td>
-                    <td>
-                        <pre>&lt;img src="logo.png" alt="Website logo"&gt;</pre>
-                    </td>
-                </tr>
+                    <tr class="row-table">
+                        <td>Image missing alt attribute</td>
+                        <td>
+                            <pre>&lt;img src="logo.png"&gt;</pre>
+                        </td>
+                        <td>Image with descriptive alt text</td>
+                        <td>
+                            <pre>&lt;img src="logo.png" alt="Website logo"&gt;</pre>
+                        </td>
+                    </tr>
 
-                <tr class="row-table">
-                    <td>Table missing &lt;th&gt;</td>
-                    <td>
-                        <pre>&lt;tr&gt;&lt;td&gt;Name&lt;/td&gt;&lt;td&gt;Age&lt;/td&gt;&lt;/tr&gt;</pre>
-                    </td>
-                    <td>Table headers added</td>
-                    <td>
-                        <pre>&lt;tr&gt;&lt;th&gt;Name&lt;/th&gt;&lt;th&gt;Age&lt;/th&gt;&lt;/tr&gt;</pre>
-                    </td>
-                </tr>
+                    <tr class="row-table">
+                        <td>Table missing &lt;th&gt;</td>
+                        <td>
+                            <pre>&lt;tr&gt;&lt;td&gt;Name&lt;/td&gt;&lt;td&gt;Age&lt;/td&gt;&lt;/tr&gt;</pre>
+                        </td>
+                        <td>Table headers added</td>
+                        <td>
+                            <pre>&lt;tr&gt;&lt;th&gt;Name&lt;/th&gt;&lt;th&gt;Age&lt;/th&gt;&lt;/tr&gt;</pre>
+                        </td>
+                    </tr>
 
-                <tr class="row-table">
-                    <td>Table missing &lt;caption&gt;</td>
-                    <td>
-                        <pre>&lt;table&gt;
+                    <tr class="row-table">
+                        <td>Table missing &lt;caption&gt;</td>
+                        <td>
+                            <pre>&lt;table&gt;
   &lt;tr&gt;&lt;th&gt;Model&lt;/th&gt;&lt;/tr&gt;
 &lt;/table&gt;</pre>
-                    </td>
-                    <td>Table with caption</td>
-                    <td>
-                        <pre>&lt;table&gt;
+                        </td>
+                        <td>Table with caption</td>
+                        <td>
+                            <pre>&lt;table&gt;
   &lt;caption&gt;HCI Models&lt;/caption&gt;
   &lt;tr&gt;&lt;th&gt;Model&lt;/th&gt;&lt;/tr&gt;
 &lt;/table&gt;</pre>
-                    </td>
-                </tr>
+                        </td>
+                    </tr>
 
-                <tr class="row-table">
-                    <td>&lt;th&gt; missing scope</td>
-                    <td>
-                        <pre>&lt;th&gt;Model&lt;/th&gt;</pre>
-                    </td>
-                    <td>Header with proper scope</td>
-                    <td>
-                        <pre>&lt;th scope="col"&gt;Model&lt;/th&gt;</pre>
-                    </td>
-                </tr>
+                    <tr class="row-table">
+                        <td>&lt;th&gt; missing scope</td>
+                        <td>
+                            <pre>&lt;th&gt;Model&lt;/th&gt;</pre>
+                        </td>
+                        <td>Header with proper scope</td>
+                        <td>
+                            <pre>&lt;th scope="col"&gt;Model&lt;/th&gt;</pre>
+                        </td>
+                    </tr>
 
-                <tr class="row-table">
-                    <td>Form input without label</td>
-                    <td>
-                        <pre>&lt;input type="text"&gt;</pre>
-                    </td>
-                    <td>Input with label</td>
-                    <td>
-                        <pre>&lt;label&gt;Name&lt;/label&gt;
+                    <tr class="row-table">
+                        <td>Form input without label</td>
+                        <td>
+                            <pre>&lt;input type="text"&gt;</pre>
+                        </td>
+                        <td>Input with label</td>
+                        <td>
+                            <pre>&lt;label&gt;Name&lt;/label&gt;
 &lt;input type="text"&gt;</pre>
-                    </td>
-                </tr>
-            </tbody>
+                        </td>
+                    </tr>
+                </tbody>
 
-        </table>
+            </table>
+        </section>
+
+        <section>
+            <h2 class="table-head">True And False</h2>
+            <ol>
+                <li>Every link inside &lt;ul&gt; must be placed inside an &lt;li&gt;. <strong>True</strong></li>
+                <li>A page may have multiple &lt;h1&gt; headings to make text larger. <strong>False</strong></li>
+                <li>aria-current="page" should be used on the active navigation item.<strong>True</strong></li>
+                <li>A form is accessible even if it has no &lt;label&gt; elements. <strong>False</strong></li>
+                <li>KLM predicts execution time for expert, error-free performance. <strong>True</strong></li>
+            </ol>
+        </section>
+
+        <section>
+            <h2 class="table-head">Short Answer</h2>
+            <article class="row-table">
+                <p><strong>1. Difference between a semantic element and a generic element</strong></p>
+            <p>
+                A semantic element (like &lt;nav&gt;, &lt;header&gt;) clearly describes its meaning and purpose to the
+                browser and screen readers.A generic element (like &lt;div&gt;) has no meaning and is mainly used for layout or styling.
+            </p>
+            
+            <p><strong>2. Why does KLM not model high-level planning and interpretation?</strong></p>
+            <p>
+                KLM focuses only on physical actions like keystrokes and mouse clicks. It does not include thinking, decision-making, or understanding, because those are high-level cognitive tasks.
+            </p>
+            </article>
         </section>
     </main>
 
