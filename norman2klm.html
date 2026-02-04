@@ -1,21 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Norman vs. GOMS vs. KLM – Cognitive Models</title>
 
   <style>
-    /* Minimal styling allowed in Lab 01: color only */
-    .row-norman { background-color: #fff3cd; } /* warm amber */
-    .row-goms   { background-color: #e7f3ff; } /* light blue */
-    .row-klm    { background-color: #e9f7ef; } /* light green */
+    .row-table {
+      background-color: #e7f3ff;
+    }
+
+    /* warm amber */
+    .row-goms {
+      background-color: #e7f3ff;
+    }
+
+    /* light blue */
+    .row-klm {
+      background-color: #e9f7ef;
+    }
+
+    /* light green */
+    .table-head {
+      background-color: #fff3cd;
+    }
 
     .key-takeaway {
       background-color: #fff3cd;
-      padding: 0.5em;
     }
   </style>
+
 </head>
+
 <body>
 
   <!-- Page header -->
@@ -32,6 +48,8 @@
       <li><a href="contact.html">Contact</a></li>
       <li><a href="analysis.html">Interaction Analysis</a></li>
       <li><a href="norman2klm.html" aria-current="page">Norman–GOMS–KLM</a></li>
+      <li><a href="QNA.html">Comman HTML Errors</a></li>
+      <li><a href="discussion.html">Week 01-04 </a></li>
       <li><a href="assignment01.html">Lab 01 Rules</a></li>
 
     </ul>
@@ -40,159 +58,251 @@
   <!-- Main content -->
   <main>
 
-    <!-- Comparison section -->
     <section>
-      <h2>Clean Comparison (Class &amp; Exam Reference)</h2>
+      <h2>Clean Comparison</h2>
 
-      <table border="1">
-        <caption>
-          Model-based evaluation: what each model explains vs. predicts
-        </caption>
+      <table>
+        <caption><strong>Model-based evaluation: what each model explains vs. predicts</strong></caption>
 
-        <thead>
+        <thead class="table-head">
+
           <tr>
-            <th scope="col">Model</th>
-            <th scope="col">Category</th>
-            <th scope="col">What it Explains</th>
-            <th scope="col">What it Predicts</th>
+            <th>Model</th>
+            <th>Category</th>
+            <th>Explains</th>
+            <th>Example</th>
+            <th>Predicts</th>
           </tr>
+
         </thead>
 
         <tbody>
-          <tr class="row-norman">
-            <th scope="row">Norman</th>
-            <td>Cognitive / descriptive</td>
-            <td>Understanding, errors, feedback, gulfs</td>
-            <td>❌ Nothing (no performance prediction)</td>
+
+          <tr class="row-table">
+            <td>Norman</td>
+            <td>Congnitive / Descriptive</td>
+            <td>
+              <ul>
+                <li>How users think & decide</li>
+                <li>Possible errors</li>
+                <li>Feedback & interaction gaps (gulfs)</li>
+              </ul>
+            </td>
+            <td>
+              Submitting assignment online:
+              <ul>
+                <li>Goal → Decide to submit</li>
+                <li>Action → Upload file</li>
+                <li>Evaluate → Confirm Success</li>
+              </ul>
+            </td>
+            <td>None (does not predict performance)</td>
           </tr>
 
-          <tr class="row-goms">
-            <th scope="row">GOMS</th>
-            <td>Predictive / analytic</td>
-            <td>Task structure for expert users</td>
-            <td>✔ Relative efficiency</td>
+          <tr class="row-table">
+            <td>GOMS</td>
+            <td>Predictive / Analytic </td>
+            <td>
+              <ul>
+                <li>Task structure for expert users</li>
+                <li>Sequence of actions & methods</li>
+              </ul>
+            </td>
+            <td>
+              Copy text in Word:
+              <ul>
+                <li>Method 1 → Mouse → Right-click → Copy</li>
+                <li>Method 2 → Keyboard → Ctrl + C</li>
+              </ul>
+            </td>
+            <td>Relative efficiency of methods</td>
           </tr>
 
-          <tr class="row-klm">
-            <th scope="row">KLM</th>
-            <td>Predictive / quantitative</td>
-            <td>Low-level physical and motor actions</td>
-            <td>✔ Execution time</td>
+          <tr class="row-table">
+            <td>KLM</td>
+            <td>Predictive / Quantitative</td>
+            <td>
+              <ul>
+                <li>Low-level physical & mental actions</li>
+                <li>Keystrokes, clicks, mental prep, system response</li>
+              </ul>
+            </td>
+            <td>
+              Copy text using Ctrl + C
+              <ul>
+                <li>Mental prep → 1.35s</li>
+                <li>Ctrl → 0.2s</li>
+                <li>C → 0.2s</li>
+                <li>Total = 1.75s</li>
+              </ul>
+            </td>
+            <td>Exact execution time</td>
           </tr>
         </tbody>
       </table>
     </section>
 
-    <!-- KLM operators -->
     <section>
-      <h2>KLM Operators (Execution-Level Primitives)</h2>
+      <h2>Norman's Model</h2>
 
-      <p>
-        The Keystroke-Level Model (KLM) decomposes the <strong>execution phase</strong>
-        of interaction into a small set of primitive operators. KLM assumes the user
-        is expert and that the method has already been chosen.
-      </p>
+      <table>
 
-      <table border="1">
-        <caption>
-          KLM operators (Dix et al., Chapter 12 – Cognitive Models / Physical &amp; Device Models)
-        </caption>
+        <caption><strong>Example: </strong>Switching on a desk lamp</caption>
 
-        <thead>
+        <thead class="table-head">
+
           <tr>
-            <th scope="col">Operator</th>
-            <th scope="col">Name</th>
-            <th scope="col">Meaning</th>
-            <th scope="col">Example</th>
+            <th>Phases</th>
+            <th>Stages</th>
+            <th>Example</th>
           </tr>
+
         </thead>
 
         <tbody>
-          <tr>
-            <th scope="row">K</th>
-            <td>Keystroking</td>
-            <td>Pressing a key (including modifiers)</td>
-            <td>Typing a character or pressing Delete</td>
+
+          <tr class="row-table">
+            <td rowspan="4">Execution</td>
+            <td>Establishing the goal.</td>
+            <td>Need more light while reading.</td>
           </tr>
 
-          <tr>
-            <th scope="row">B</th>
-            <td>Button press</td>
-            <td>Pressing a mouse button</td>
-            <td>Left-click</td>
+          <tr class="row-table">
+            <td>Forming the intention.</td>
+            <td>Switch on the desk lamp.</td>
           </tr>
 
-          <tr>
-            <th scope="row">P</th>
-            <td>Pointing</td>
-            <td>Moving pointer to a target</td>
-            <td>Move cursor to an icon</td>
+          <tr class="row-table">
+            <td>Specifying the action sequence</td>
+            <td>Reach over and press the lamp switch.</td>
           </tr>
 
-          <tr>
-            <th scope="row">H</th>
-            <td>Homing</td>
-            <td>Switching hand between devices</td>
-            <td>Keyboard → mouse</td>
+          <tr class="row-table">
+            <td>Executing the action</td>
+            <td>Press the lamp switch.</td>
           </tr>
 
-          <tr>
-            <th scope="row">D</th>
-            <td>Drawing</td>
-            <td>Drawing lines using a pointing device</td>
-            <td>Dragging to draw a shape</td>
+          <tr class="row-table">
+            <td rowspan="3">Evaluation</td>
+            <td>Perceiving the system state.</td>
+            <td>Observe if the light is on.</td>
           </tr>
 
-          <tr>
-            <th scope="row">M</th>
-            <td>Mental preparation</td>
-            <td>Preparing for a physical action</td>
-            <td>Pause before clicking the correct control</td>
+          <tr class="row-table">
+            <td>Interpreting the system state</td>
+            <td>If light doesn’t come on → bulb blown or lamp unplugged.</td>
           </tr>
 
-          <tr>
-            <th scope="row">R</th>
-            <td>System response</td>
-            <td>Waiting for system feedback (if required)</td>
-            <td>Application loading</td>
+          <tr class="row-table">
+            <td>Evaluating Outcome</td>
+            <td>If light is sufficient → goal achieved; if not → formulate new goal (e.g., switch on ceiling light).
+            </td>
           </tr>
+
         </tbody>
+
       </table>
+
+      <p><strong>Reference: </strong>(Dix et al., Chapter 3 – The Interaction / Model of Interaction) page no 126</p>
+
+    </section>
+
+    <section>
+
+      <h2>GOMS Model </h2>
+
+      <p>GOMS (Goals, Operators, Methods, Selection) model helps us analyze the steps a user takes to achieve a goal.
+        Let’s take an example of minimizing a window on a computer.</p>
+
+      <p><strong>GOMS Example</strong></p>
+
+      <article class="row-table">
+        <p><strong>Method 1: </strong>CLOSE-METHOD</p>
+        <ul>
+          <li>Goal: ICONIZE-WINDOW
+            <ul>
+              <li>USE-CLOSE-METHOD
+                <ul>
+                  <li>Move mouse to window header</li>
+                  <li>POP-UP menu</li>
+                  <li>Click over close option</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+
+        <p><strong>Method : </strong>L7-METHOD</p>
+        <ul>
+          <li>Goal: ICONIZE-WINDOW
+            <ul>
+              <li>USE-L7-METHOD
+                <ul>
+                  <li>Press L7 key </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+
+
+        <p><strong>Selection Rule</strong></p>
+        <ul>
+          <li>User Sam:
+            <ul>
+              <li>use CLOSE-METHOD unless another rule applies</li>
+              <li>if the application is 'blocks', use L7-METHOD</li>
+            </ul>
+          </li>
+        </ul>
+      </article>
+
+      <p><strong>Reference: </strong>(Dix et al., Chapter 12 – Cognitive Models / Goal and task hierarchies) page no 422
+      </p>
+
     </section>
 
     <!-- Worked example -->
     <section>
-      <h2>Worked Example: Correcting a Single Character</h2>
 
-      <p>
-        Example task: the user notices a single-character error in a mouse-based
-        editor, deletes it, retypes it, and returns to the insertion point.
-      </p>
+      <h2>Keystroke-Level Model</h2>
 
-      <ol>
-        <li>Move hand to mouse</li>
-        <li>Position mouse after bad character</li>
-        <li>Return to keyboard</li>
-        <li>Delete character</li>
-        <li>Type correction</li>
-        <li>Reposition insertion point</li>
-      </ol>
+      <h3>Worked Example: Correcting a Single Character</h3>
 
-      <p>One possible KLM operator sequence:</p>
+      <article class="row-table">
+        <p>
+          Example task: the user notices a single-character error in a mouse-based
+          editor, deletes it, retypes it, and returns to the insertion point.
+        </p>
 
-      <pre>
-H[mouse]
-P B[LEFT]
-H[keyboard]
-M K[DELETE]
-K[char]
-H[mouse] M P B[LEFT]
-      </pre>
+        <ol>
+          <li>Move hand to mouse</li>
+          <li>Position mouse after bad character</li>
+          <li>Return to keyboard</li>
+          <li>Delete character</li>
+          <li>Type correction</li>
+          <li>Reposition insertion point</li>
+        </ol>
+
+        <p>One possible KLM operator sequence:</p>
+
+          <pre>
+            H[mouse]
+            P B[LEFT]
+            H[keyboard]
+            M K[DELETE]
+            K[char]
+            H[mouse] M P B[LEFT]
+          </pre>
+      </article>
 
       <p>
         This sequence illustrates how KLM models only execution-level actions.
         High-level planning, learning, and interpretation are not represented.
       </p>
+
+      <p><strong>Reference: </strong>(Dix et al., Chapter 12 – Cognitive Models / Physical and Device Models) page no
+        436</p>
     </section>
 
     <!-- Key takeaways -->
@@ -227,4 +337,5 @@ H[mouse] M P B[LEFT]
   </footer>
 
 </body>
+
 </html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <!-- Character encoding for consistent text rendering -->
   <meta charset="UTF-8">
@@ -7,6 +8,7 @@
   <!-- Page title shown in browser tab and announced by screen readers -->
   <title>Don Norman – Contact</title>
 </head>
+
 <body>
 
   <!-- Page header: identifies the page purpose -->
@@ -25,6 +27,8 @@
 
       <li><a href="analysis.html">Interaction Analysis</a></li>
       <li><a href="norman2klm.html">Norman–GOMS–KLM</a></li>
+      <li><a href="QNA.html">Comman HTML Errors</a></li>
+      <li><a href="discussion.html">Week 01-04 </a></li>
       <li><a href="assignment01.html">Lab 01 Rules</a></li>
 
     </ul>
@@ -33,18 +37,22 @@
   <!-- Main landmark: primary content of this page -->
   <main>
     <form action="#" method="post">
-      
+
       <!-- Groups related form controls and provides context -->
       <fieldset>
         <legend>Send a Message</legend>
 
         <!-- Label explicitly associated with its input -->
-        <label for="subject">Subject</label><br>
-        <input type="text" id="subject" name="subject"><br><br>
+        <p>
+          <label for="subject">Subject</label><br>
+          <input type="text" id="subject" name="subject">
+        </p>
 
         <!-- Textarea with clear label for screen readers -->
-        <label for="message">Message</label><br>
-        <textarea id="message" name="message" rows="5" cols="30"></textarea><br><br>
+        <p>
+          <label for="message">Message</label><br>
+          <textarea id="message" name="message" rows="5" cols="30"></textarea>
+        </p>
 
         <!-- Submit button is keyboard accessible by default -->
         <button type="submit">Send</button>
@@ -59,4 +67,5 @@
   </footer>
 
 </body>
+
 </html>
